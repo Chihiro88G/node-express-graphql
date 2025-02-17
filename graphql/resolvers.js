@@ -11,6 +11,8 @@ module.exports = {
   createUser: async function({ userInput }, req) {
     // const email = args.userInput.email;
 
+    // do validation check here!!
+
     const existingUser = await User.findOne({ email: userInput.email })
     if (existingUser) {
       const err = new Error("User exists already");
