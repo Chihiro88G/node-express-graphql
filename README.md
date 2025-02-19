@@ -2,9 +2,17 @@
 
 uri: localhost.../graphql
 type: POST request
+content type: application/json
 body: 
 {
   'query': '{ hello { text } }'
+}
+
+{
+  login(email: 'test@test.com', pw: 'testpw') {
+    token
+    userId
+  }
 }
 
 
